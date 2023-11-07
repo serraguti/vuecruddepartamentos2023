@@ -44,6 +44,7 @@ const service = new ServiceDepartamentos();
     export default {
         name: "DepartamentosComponent",
         mounted() {
+            service.fetchData();
             service.getDepartamentos().then(result => {
                 this.departamentos = result;
                 this.status = true;

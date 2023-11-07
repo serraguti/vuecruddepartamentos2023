@@ -56,4 +56,20 @@ export default class ServiceDepartamentos {
         })
     }
 
+    fetchData() {
+        var request = "api/departamentos";
+        var url = Global.urlApiDepartamentos + request;
+        fetch(url, {
+          method: "GET",
+        })
+          .then((response) => {
+            response.json().then((data) => {
+                console.log(data);
+            });
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+    }    
+
 }
