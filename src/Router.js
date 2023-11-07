@@ -3,11 +3,15 @@ import DepartamentosComponent from './components/DepartamentosComponent.vue';
 import CreateDepartamento from './components/CreateDepartamento.vue';
 import DetallesDepartamento from './components/DetallesDepartamento.vue';
 import UpdateDepartamento from './components/UpdateDepartamento.vue';
+import DeleteDepartamento from './components/DeleteDepartamento.vue';
 
 const myRoutes = [
     {
         path: "/", component: DepartamentosComponent
     }, 
+    {
+        path: "/delete/:id", component: DeleteDepartamento
+    },
     {
         path: "/create", component: CreateDepartamento
     }, 
